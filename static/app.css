@@ -1,0 +1,76 @@
+#game-board {
+   font-size: 4vw;
+   display:flexbox;
+   margin: auto;
+   margin-bottom: 2vh;
+}
+
+tr {
+   background-color: yellow;
+   display: flexbox;
+}
+
+
+.col-4 {
+   background-color: yellow;
+   height: 50vh;
+   width: 22vw;
+   border: yellow solid 5px;
+   border-radius: 15px;
+}
+
+ul {
+   list-style: none;
+   background-color: yellow;
+   border: yellow solid 5px;
+   border-radius: 15px;
+}
+
+h1 {
+   background-color: yellow;
+   margin-bottom: 0px;
+   text-shadow: 2px 2px 8px black;
+}
+
+h3 {
+   margin-top: 0px;
+   background-color: yellow;
+   text-shadow: 2px 2px 8px blue;
+   margin-bottom: 0px;
+}
+
+p {
+   background-color: yellow;
+   margin-top: 0px;
+   margin-bottom: 2vh;
+   text-decoration: underline;
+}
+
+
+.letter {
+   width: 8vw;
+   height: 8vw;
+   color: black;
+   border: solid blue 5px;
+   display: flex;
+   justify-content: space-around;
+}
+
+body {
+	background: linear-gradient(-45deg, blue, darkblue, #23a6d5, goldenrod );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
