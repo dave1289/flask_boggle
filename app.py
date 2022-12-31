@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = 'lksdfh43'
 
 # creating boggle object for game
 boggle_game = Boggle()
-
+score = 0
 
 @app.route('/')
 def show_home():
@@ -19,13 +19,14 @@ def show_home():
    session['board'] = board
    highscore = session.get("highscore", 0)
    numplays = session.get("numplays", 0)
-   return render_template('index.html', board=board, highscore=highscore, numplays=numplays)
+   return render_template('index.html', board=board, highscore=highscore, numplays=numplays, score=score)
 
 @app.route('/handle-word', methods=['POST'])
 def word_submit():
+   global score
    """submits word for processing after guess"""
-   word = request.args["word"]
+   word = request.form["word"]
    board = session["board"]
-   response = boggle_game.check_valid_word(board, word)
-
-   return jsonify({'result': response})
+   highscore = session.get("highscore", 0)
+   numplays = session.get("numplays", 0)
+   return render_template('index.html', board=board, highscore=highscore, numplays=numplays, score=score)

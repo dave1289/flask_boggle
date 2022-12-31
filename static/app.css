@@ -10,6 +10,11 @@ tr {
    display: flexbox;
 }
 
+#words-title {
+   font-size: 1.25em;
+   text-decoration: underline;
+}
+
 
 .col-4 {
    background-color: yellow;
